@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Legal Clinic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">⚖️ Legal Clinic</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="faq.html" class="active">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our legal services.</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I need an appointment?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Appointments are recommended to ensure dedicated consultation time. While we try to accommodate walk-ins, scheduling in advance guarantees that you will receive undivided attention from our legal professionals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are online consultations available?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. We offer both online and in-person consultations to suit your convenience. Whether you prefer to meet at our office or discuss your matter via video call, we are flexible with our consultation methods.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are my discussions confidential?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. All consultations remain strictly confidential under attorney-client privilege. Your privacy and trust are of paramount importance to us, and we maintain the highest standards of confidentiality in all matters.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What documents should I bring?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bring all documents relevant to your legal matter for a comprehensive evaluation. This may include contracts, correspondence, court documents, photographs, or any other evidence that pertains to your case. The more information you provide, the better we can assess your situation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is your fee structure?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our fees vary depending on the complexity and nature of your legal matter. We offer transparent pricing and will discuss all costs with you upfront before proceeding. We strive to provide quality legal services at competitive rates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does a case typically take?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The duration of a case depends on its complexity, the court's schedule, and the nature of the legal matter. During your initial consultation, we can provide a preliminary estimate based on similar cases and the specifics of your situation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I reach you for urgent matters?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. For urgent legal matters, you can contact us via WhatsApp at +91 96979 85577 or call us directly. We prioritize urgent cases and will respond to your emergency as quickly as possible.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What areas of law do you specialize in?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We specialize in Criminal Law, Matrimonial and Family Matters, Land and Property Disputes, Consumer Cases, Service and Employment Matters, Bail and Appeals, and representation before High Courts and the Supreme Court. Visit our Services page for detailed information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <h3>Legal Clinic</h3>
+                <p>Trusted Legal Advice | Professional Representation | Client First</p>
+            </div>
+            <p>© <span id="year"></span> Legal Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const icon = button.querySelector('.faq-icon');
+                
+                item.classList.toggle('active');
+                
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.textContent = '-';
+                } else {
+                    answer.style.maxHeight = '0';
+                    icon.textContent = '+';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
