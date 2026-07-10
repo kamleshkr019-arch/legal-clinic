@@ -16,6 +16,8 @@ body {
     color: var(--text);
     background: var(--bg);
     line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; }
@@ -104,6 +106,8 @@ img { max-width: 100%; }
     border-radius: 8px;
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 44px;
+    line-height: 1.2;
 }
 .btn:hover { transform: translateY(-2px); }
 .btn-primary { background: var(--accent); color: var(--primary-dark); }
@@ -238,9 +242,16 @@ img { max-width: 100%; }
     }
     .nav-links.open { display: flex; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
+    .hero h1 { font-size: 1.8rem; }
+    .hero p, .subheading { font-size: 0.98rem; }
     .cards, .stats-grid, .process-grid { grid-template-columns: 1fr; }
     .service-section ul { columns: 1; }
-    .hero { padding: 3.5rem 0; }
+    .hero { padding: 3.2rem 0; }
+    .section { padding: 3rem 0; }
     .footer-content { flex-direction: column; align-items: flex-start; }
     .header-inner { flex-wrap: wrap; }
+    .container { width: min(1120px, calc(100% - 1.25rem)); }
+    .card, .process-step, .contact-card, .feature, .cta-box, .premium-flyer, .hero-card {
+        padding: 1.1rem;
+    }
 }
