@@ -40,7 +40,7 @@ http://localhost:8000/index.html
 
 3. **Push to GitHub** (run these commands in the LegalClinic folder):
 ```bash
-git remote add origin https://github.com/YOUR-USERNAME/legal-clinic.git
+git remote add origin https://github.com/kamleshkr019-arch/legal-clinic.git
 git branch -M main
 git push -u origin main
 ```
